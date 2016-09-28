@@ -1,5 +1,12 @@
 ### Twitter Feed Code Challenge - Salesforce
 
+## Notes
+Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
+
+The page reloads every 60 seconds making ajax request to get latest 10 tweets
+
+The top 10 tweet json data in stored on client side cache (HTML - localstorage)
+
 ## Code Snippets:
 
 The following code returns the raw json from Twitter API:
@@ -8,12 +15,12 @@ The following code returns the raw json from Twitter API:
             twit.GetMyTimeline();
 
 
-## Notes
-Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
+The following code refreshes the page every 60 seconds by making Ajax call to get latest tweets:
 
-The page reloads every 60 seconds making ajax request to get latest 10 tweets
+                 setInterval(function () { 
+                    loadtweets(); // this will run after every 60 seconds 
+                 }, 60000 
 
-The top 10 tweet json data in stored on client side cache (HTML - localstorage)
 
 ## Demo projects in GitHub
 
@@ -22,6 +29,8 @@ This uses a page WebMethod to make the api call and an Ajax json request to disp
 It could however be exposed in any kind of web service.
 
 Default.aspx is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
+
+Web.config file contains appsettings which have ConsumerKey, ConsumerSecret, OAuth url used to get token from Twitter. It also has timelineurlformat which has filters like screen_name, tweet count, include retweets, exclude replies etc. As per current requirement screen name is salesforce and count is 10. 
 
 # oAuthTwitterWrapper - csproj
 This is server side application used to:
