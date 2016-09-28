@@ -6,7 +6,7 @@
 This uses a page WebMethod to make the api call and an Ajax json request to display the tweets.
 It could however be exposed in any kind of web service.
 
-Default.aspx is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
+Default.aspx - is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
 
 Web.config file contains appsettings which have ConsumerKey, ConsumerSecret, OAuth url used to get token from Twitter. It also has timelineurlformat which has filters like screen_name, tweet count, include retweets, exclude replies etc. As per current requirement screen name is salesforce and count is 10. 
 
@@ -17,6 +17,8 @@ This is server side application used to:
 2. Getting list of latest tweets from user timeline using GET statuses/user_timeline Twitter API. Link below:
             https://dev.twitter.com/rest/reference/get/statuses/user_timeline
 
+
+TimeLine.cs - Class has been created to serialize and store the json object retrieved from twitter API in c# server side, if needed.
 
 ## Code Snippets:
 
