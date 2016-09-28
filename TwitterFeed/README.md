@@ -1,27 +1,5 @@
 ### Twitter Feed Code Challenge - Salesforce
 
-## Notes
-Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
-
-The page reloads every 60 seconds making ajax request to get latest 10 tweets
-
-The top 10 tweet json data in stored on client side cache (HTML - localstorage)
-
-## Code Snippets:
-
-The following code returns the raw json from Twitter API:
-
-            var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            twit.GetMyTimeline();
-
-
-The following code refreshes the page every 60 seconds by making Ajax call to get latest tweets:
-
-                 setInterval(function () { 
-                    loadtweets(); // this will run after every 60 seconds 
-                 }, 60000 
-
-
 ## Demo projects in GitHub
 
 # Web application - csproj
@@ -39,3 +17,27 @@ This is server side application used to:
 2. Getting list of latest tweets from user timeline using GET statuses/user_timeline Twitter API. Link below:
             https://dev.twitter.com/rest/reference/get/statuses/user_timeline
 
+
+## Code Snippets:
+
+The following code returns the raw json from Twitter API:
+
+            var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+            twit.GetMyTimeline();
+
+
+The following code refreshes the page every 60 seconds by making Ajax call to get latest tweets:
+
+                 setInterval(function () { 
+                    loadtweets(); // this will refresh page after every 60 seconds with latest tweets
+                 }, 60000 
+
+
+## Notes
+Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
+
+The page reloads every 60 seconds making ajax request to get latest 10 tweets
+
+The top 10 tweet json data in stored on client side cache (HTML - localstorage)
+
+We are showing 'Loading..' text every time page is refreshed from server side. This can be removed and is added for demo purpose only
