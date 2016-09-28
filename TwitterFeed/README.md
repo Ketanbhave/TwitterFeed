@@ -3,8 +3,7 @@
 ## Demo projects in GitHub
 
 # Web application - csproj
-This uses a page WebMethod to make the api call and an Ajax json request to display the tweets.
-It could however be exposed in any kind of web service.
+This project uses method getTwitterfeed make the api call and an Ajax json request to display the tweets.
 
 Default.aspx - is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
 
@@ -19,6 +18,10 @@ This is server side application used to:
 
 
 TimeLine.cs - Class has been created to serialize and store the json object retrieved from twitter API in c# server side, if needed.
+
+Authenticate.cs - Class contains AuthenticateMe() method which is used to authenticate given user and get token.
+
+OAuthTwitterWrapper.cs -  Class contains GetMyTimeline() which is used to get json result from twitter API
 
 ## Code Snippets:
 
