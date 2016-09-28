@@ -64,8 +64,6 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="js\jquery-1.7.2.min.js" />
-    <Content Include="js\tweet.js" />
-    <Content Include="js\twitter-text.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
