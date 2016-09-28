@@ -1,5 +1,13 @@
 ### Twitter Feed Code Challenge - Salesforce
 
+## Assumptions 
+
+1. Every time user enters a search query, only the tweets which contain the string in its tweet as show. Rest are hidden. This search query is Case insenstive
+
+2. The no of times a tweet has been retweeted in shown in bracket next to tweet text for e.g. (6) indicates 6 retweets
+
+3. Every 60 seconds the screen refreshes with latest tweets from Server and seaah query and text box are cleared. In order to filter, user needs to enter the search query and press find again
+
 ## Demo projects in GitHub
 
 # Web application - csproj
