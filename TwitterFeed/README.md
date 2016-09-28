@@ -34,6 +34,7 @@ The following code refreshes the page every 60 seconds by making Ajax call to ge
 
 
 ## Notes
+
 Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
 
 The page reloads every 60 seconds making ajax request to get latest 10 tweets
@@ -41,3 +42,5 @@ The page reloads every 60 seconds making ajax request to get latest 10 tweets
 The top 10 tweet json data in stored on client side cache (HTML - localstorage)
 
 We are showing 'Loading..' text every time page is refreshed from server side. This can be removed and is added for demo purpose only
+
+function replaceURLWithHTMLLinks is used to replace text url with html hyperlinks (href)
