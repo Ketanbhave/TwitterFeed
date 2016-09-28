@@ -66,7 +66,7 @@
                 return text.replace(exp, "<a href='$1'>$1</a>");
             }
 
-            function getfilteredtweets() {
+            $("#find").click(function () {
                 document.getElementById("results").innerHTML = "";
                 $("#results").empty();
                 var query = document.getElementById('query').value ; //seach query
@@ -87,7 +87,7 @@
                     }
                 }
                 }
-            }
+            });
         });
     </script>
 </head>
@@ -98,7 +98,7 @@
     <div id="loading">Loading...</div> 
     <div >
         <input type="text" id="query"/>
-        <button onclick="getfilteredtweets()"> Find </button>
+        <button id="find"> Find </button>
     </div>
     <div id="results" />
     </form>
