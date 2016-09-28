@@ -21,7 +21,10 @@ TimeLine.cs - Class has been created to serialize and store the json object retr
 
 Authenticate.cs - Class contains AuthenticateMe() method which is used to authenticate given user and get token.
 
+Utitlity.cs - The RequstJson method in Utility class adds the AccessToken recieved on Authorization to make API call.
+
 OAuthTwitterWrapper.cs -  Class contains GetMyTimeline() which is used to get json result from twitter API
+
 
 ## Code Snippets:
 
