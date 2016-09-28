@@ -27,8 +27,8 @@ namespace OAuthTwitterWrapper
 				using (var reader = new StreamReader(timeLineResponse.GetResponseStream()))
 				{
 					json = reader.ReadToEnd();
-					//deserialize into a c# object
-					var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
+					//deserialize into a c# object, if needed
+					//var result = JsonConvert.DeserializeObject<List<TimeLine>>(json);
 				}
 			}
 			return json;
