@@ -1,7 +1,7 @@
 #oAuthTwitterWrapper - csproj
 This provides a really simple solution to authenticating and wrapping twitter's API calls using the 1.1 API and OAuth.
 
-##Quick installation instructions:
+##Code Snippets:
 
 The following code returns the raw json from Twitter API:
 
