@@ -34,14 +34,12 @@ Utitlity.cs - The RequstJson method in Utility class adds the AccessToken reciev
 
 OAuthTwitterWrapper.cs -  Class contains GetMyTimeline() which is used to get json result from twitter API
 
+### Technologies Used:
+
+Server Side: C#
+Client Side: HTML, Javascript, JQuery
 
 ## Code Snippets:
-
-The following code returns the raw json from Twitter API:
-
-            var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            twit.GetMyTimeline();
-
 
 The following code refreshes the page every 60 seconds by making Ajax call to get latest tweets:
 
@@ -50,9 +48,15 @@ The following code refreshes the page every 60 seconds by making Ajax call to ge
                  }, 60000 
 
 
+The following code returns the raw json from Twitter API to Web Application:
+
+              var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+              twit.GetMyTimeline();
+
+
 ## Notes
 
-1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
+1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#, if needed).
 
 2. The page reloads every 60 seconds making ajax request to get latest 10 tweets
 
