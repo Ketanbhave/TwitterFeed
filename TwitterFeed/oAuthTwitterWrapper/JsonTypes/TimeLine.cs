@@ -17,8 +17,8 @@ namespace OAuthTwitterWrapper.JsonTypes
         [JsonProperty("text")]
 		public string Text { get; set; }
 
-		[JsonProperty("retweet_count")]
-		public int RetweetCount { get; set; }
+	[JsonProperty("retweet_count")]
+	public int RetweetCount { get; set; }
 
         
     }
