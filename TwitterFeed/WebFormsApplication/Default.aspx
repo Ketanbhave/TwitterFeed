@@ -15,8 +15,7 @@
                 }, 60000);
             });
 
-           // var cache = {};
-
+           
             function loadtweets() {
                 $('#loading').show(); //show loading text.. can be removed
                 $.ajax({
