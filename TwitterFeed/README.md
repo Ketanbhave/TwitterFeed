@@ -11,6 +11,11 @@
 
 ## Demo projects in GitHub
 
+### Installation Instructions:
+
+Open oAuthTwitterTimeline.sln is Visual Studio and Run the Solution in browser.
+In order to run without Visual Studio, IIS Server need to be installed on the machine. Download the solution to the machine, create "Application" or "Virtual Directory" and map it to Physical path of the solution.
+
 ### Web application - csproj
 This client side project uses method getTwitterfeed make the api call and an Ajax json request to display the tweets.
 
