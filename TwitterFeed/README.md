@@ -1,15 +1,24 @@
-### Twitter Feed Code Challenge - Salesforce
+# Twitter Feed Code Challenge - Salesforce
+
+## Assumptions 
+
+1. Every time user enters a search query, only the tweets which contain the seach string in its tweet as show. Rest are hidden. This search query is Case insenstive
+
+2. The no of times a tweet has been retweeted in shown in bracket next t theo tweet text for e.g. (6) indicates 6 retweets
+
+3. Every 60 seconds the screen refreshes with the latest tweets from Server and the searh query and text box are cleared.
+
 
 ## Demo projects in GitHub
 
-# Web application - csproj
+### Web application - csproj
 This project uses method getTwitterfeed make the api call and an Ajax json request to display the tweets.
 
 Default.aspx - is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
 
 Web.config file contains appsettings which have ConsumerKey, ConsumerSecret, OAuth url used to get token from Twitter. It also has timelineurlformat which has filters like screen_name, tweet count, include retweets, exclude replies etc. As per current requirement screen name is salesforce and count is 10. 
 
-# oAuthTwitterWrapper - csproj
+### oAuthTwitterWrapper - csproj
 This is server side application used to:
 
 1. Authenticating and wrapping twitter's API calls using the 1.1 API and OAuth.
@@ -25,14 +34,12 @@ Utitlity.cs - The RequstJson method in Utility class adds the AccessToken reciev
 
 OAuthTwitterWrapper.cs -  Class contains GetMyTimeline() which is used to get json result from twitter API
 
+### Technologies Used:
+
+Server Side: C#
+Client Side: HTML, Javascript, JQuery
 
 ## Code Snippets:
-
-The following code returns the raw json from Twitter API:
-
-            var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
-            twit.GetMyTimeline();
-
 
 The following code refreshes the page every 60 seconds by making Ajax call to get latest tweets:
 
@@ -41,9 +48,15 @@ The following code refreshes the page every 60 seconds by making Ajax call to ge
                  }, 60000 
 
 
+The following code returns the raw json from Twitter API to Web Application:
+
+              var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
+              twit.GetMyTimeline();
+
+
 ## Notes
 
-1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#,).
+1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#, if needed).
 
 2. The page reloads every 60 seconds making ajax request to get latest 10 tweets
 
