@@ -53,7 +53,11 @@ The following code returns the raw json from Twitter API to Web Application:
               var twit = new OAuthTwitterWrapper.OAuthTwitterWrapper();
               twit.GetMyTimeline();
 
+The following code is used to get / set tweets retrieved from server in web cache:
 
+            localStorage.setItem("tweets", result);
+            var tweets = localStorage.getItem("tweets");
+            
 ## Notes 
 
 1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#, if needed).
