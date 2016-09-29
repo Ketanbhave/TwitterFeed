@@ -12,11 +12,11 @@
 ## Demo projects in GitHub
 
 ### Web application - csproj
-This project uses method getTwitterfeed make the api call and an Ajax json request to display the tweets.
+This client side project uses method getTwitterfeed make the api call and an Ajax json request to display the tweets.
 
-Default.aspx - is main page loaded on this application which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
+Default.aspx - is start up page loaded on this application when App starts which shows the latest 10 feeds and also a text box to enter seach query to filter within current tweets when 'Find' button is clicked
 
-Web.config file contains appsettings which have ConsumerKey, ConsumerSecret, OAuth url used to get token from Twitter. It also has timelineurlformat which has filters like screen_name, tweet count, include retweets, exclude replies etc. As per current requirement screen name is salesforce and count is 10. 
+Web.config file - contains appsettings which have ConsumerKey, ConsumerSecret, OAuth url used to get token from Twitter. It also has timelineurlformat which has filters like screen_name, tweet count, include retweets, exclude replies etc. As per current requirement screen name is salesforce and count is 10. 
 
 ### oAuthTwitterWrapper - csproj
 This is server side application used to:
@@ -54,7 +54,7 @@ The following code returns the raw json from Twitter API to Web Application:
               twit.GetMyTimeline();
 
 
-## Notes
+## Notes 
 
 1. Currently it exposes timeline (twitter feed) , returned as raw json (which can be serialized into c#, if needed).
 
